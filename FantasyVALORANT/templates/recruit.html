@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Recruit
+{% endblock %}
+
+{% block main %}
+    <h2>Recruit your team</h2>
+    <form action="/recruit" method="post">
+        <div class="mb-3 text-danger"><p><strong>{{  feedback  }}</strong></p></div>
+        <p>Loot Box costs 100 credits. You have {{ credits }} credits.</p>
+        <p>Drop rate: A Tier: 1%, B Tier: 9%, C Tier: 30%, Casual: 60%</p>
+        <p>Click the purchase button below to roll for a player or coach.</p>
+        <button class="btn btn-success" type="submit">Purchase Loot Box</button>
+    </form>
+{% endblock %}

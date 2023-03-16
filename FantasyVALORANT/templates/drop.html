@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Drop
+{% endblock %}
+
+{% block main %}
+    <h2 class="text-danger">DROP AN AGENT</h2>
+    <form action="/drop" method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th><input class="form-check-input" type="radio" name="drop" value="freeCoach_id"></th>
+                <th><input class="form-check-input" type="radio" name="drop" value="coach_id"></th>
+                <th><input class="form-check-input" type="radio" name="drop" value="player1_id"></th>
+                <th><input class="form-check-input" type="radio" name="drop" value="player2_id"></th>
+                <th><input class="form-check-input" type="radio" name="drop" value="player3_id" required></th>
+                <th><input class="form-check-input" type="radio" name="drop" value="player4_id"></th>
+                <th><input class="form-check-input" type="radio" name="drop" value="player5_id"></th>
+                <th><input class="form-check-input" type="radio" name="drop" value="playerBench_id"></th>
+                <th><input class="form-check-input" type="radio" name="drop" value="freePlayer_id"></th>
+            </tr>
+            <tr>
+                <th class="text-warning"><strong>Unsigned Coach</strong></th>
+                <th><strong>Coach</strong></th>
+                <th><strong>Player 1</strong></th>
+                <th><strong>Player 2</strong></th>
+                <th><strong>Player 3</strong></th>
+                <th><strong>Player 4</strong></th>
+                <th><strong>Player 5</strong></th>
+                <th><strong>Bench Player</strong></th>
+                <th class="text-warning"><strong>Unsigned Player</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><i>{{  freeCoach.name  }}</i></td>
+                <td>{{  coach.name  }}</td>
+                <td>{{  player1.name  }}</td>
+                <td>{{  player2.name  }}</td>
+                <td>{{  player3.name  }}</td>
+                <td>{{  player4.name  }}</td>
+                <td>{{  player5.name  }}</td>
+                <td>{{  playerBench.name  }}</td>
+                <td><i>{{  freePlayer.name  }}</i></td>
+            </tr>
+            <tr>
+                <td><i>{{  freeCoach.value  }}</i></td>
+                <td>{{  coach.value  }}</td>
+                <td>{{  player1.value  }}</td>
+                <td>{{  player2.value  }}</td>
+                <td>{{  player3.value  }}</td>
+                <td>{{  player4.value  }}</td>
+                <td>{{  player5.value  }}</td>
+                <td>{{  playerBench.value  }}</td>
+                <td><i>{{  freePlayer.value  }}</i></td>
+            </tr>
+            <tr>
+                <td><i>{{  freeCoach.region  }}</i></td>
+                <td>{{  coach.region  }}</td>
+                <td>{{  player1.region  }}</td>
+                <td>{{  player2.region  }}</td>
+                <td>{{  player3.region  }}</td>
+                <td>{{  player4.region  }}</td>
+                <td>{{  player5.region  }}</td>
+                <td>{{  playerBench.region  }}</td>
+                <td><i>{{  freePlayer.region  }}</i></td>
+            </tr>
+            <tr>
+                <td><i>{{  freeCoach.role  }}</i></td>
+                <td><i>{{  coach.role  }}</i></td>
+                <td>{{  player1.role  }}</td>
+                <td>{{  player2.role  }}</td>
+                <td>{{  player3.role  }}</td>
+                <td>{{  player4.role  }}</td>
+                <td>{{  player5.role  }}</td>
+                <td>{{  playerBench.role  }}</td>
+                <td><i>{{  freePlayer.role  }}</i></td>
+            </tr>
+            <tr>
+                <td><i>{{  freeCoach.agent  }}</i></td>
+                <td><i>{{  coach.agent  }}</i></td>
+                <td>{{  player1.agent  }}</td>
+                <td>{{  player2.agent  }}</td>
+                <td>{{  player3.agent  }}</td>
+                <td>{{  player4.agent  }}</td>
+                <td>{{  player5.agent  }}</td>
+                <td>{{  playerBench.agent  }}</td>
+                <td><i>{{  freePlayer.agent  }}</i></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <button class="btn btn-danger" type="submit">Drop Agent</button>
+        </tfoot>
+    </table>
+    </form>
+{% endblock %}

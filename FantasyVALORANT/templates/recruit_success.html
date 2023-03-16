@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Recruit Successful
+{% endblock %}
+
+{% block main %}
+    <h3>Recruit successful!</h3>
+    <form action="/recruit_success" method="get">
+        <p>You have successfully obtained <strong>{{  agentType  }} {{ agentName }}</strong>!</p>
+        <p>You have {{ credits }} credits remaining.</p>
+        <p>Agent Rarity: {{ rarity }}</p>
+        <button class="btn btn-success" type="submit">Purchase Again</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <!-- https://memegen.link/ -->
+    <img alt="{{ top }}" class="border img-fluid" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://cdn.oneesports.gg/cdn-data/2021/11/Valorant_Episode3Act3_BattlePass_Spray_SadYoru-1024x576.jpg" title="{{ top }}">
+{% endblock %}

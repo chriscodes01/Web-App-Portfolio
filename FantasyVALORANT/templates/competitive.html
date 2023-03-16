@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Competitive
+{% endblock %}
+
+{% block main %}
+    <h2>Competitive</h2>
+    <p style="font-size: 24px;" class="text-muted">Compete against other teams!</p>
+    <form action="/competitive" method="post">
+    <div class="container">
+        <div class="flex">
+            <main style="background: linear-gradient(0.25turn, white, black, white); color: white;">Map: {{  map  }}</main>
+            <section>
+                <table class="table">
+                    <thead><i>{{  username  }}</i> // <i>{{  teamName  }}</i></thead>
+                    <tbody>
+                        <!--<tr><td name="totalValue"><strong>{{  totalValue  }}</strong</td></tr>-->
+                        <tr><td>{{  coach.name  }} // Coach</td></tr>
+                        <tr><td>{{  player1.name  }} // {{  player1.agent  }}</td></tr>
+                        <tr><td>{{  player2.name  }} // {{  player2.agent  }}</td></tr>
+                        <tr><td>{{  player3.name  }} // {{  player3.agent  }}</td></tr>
+                        <tr><td>{{  player4.name  }} // {{  player4.agent  }}</td></tr>
+                        <tr><td>{{  player5.name  }} // {{  player5.agent  }}</td></tr>
+                        <tr><td>Wins: {{  wins  }} // Losses: {{  losses  }}</td></tr>
+                        <tr><td>Team Strength: {{  totalValue  }}</td></tr>
+                    </tbody>
+                </table>
+            </section>
+            <section style="background-color: transparent; flex-basis: 5%; align-self: center;">
+                <button class="btn btn-danger" type="submit">Compete!</button>
+            </section>
+            <section style="background-color: #FFCCCB;">
+                <table class="table">
+                    <thead><i>{{  VSteamName  }}</i> \\ <i>{{  VSusername  }}</i></thead>
+                    <tbody>
+                        <!--<tr><td name="VStotalValue"><strong>{{  VStotalValue  }}</strong></td></tr>-->
+                        <tr><td>Coach \\ {{  VScoach.name  }}</td></tr>
+                        <tr><td>{{  VSplayer1.agent  }} \\ {{  VSplayer1.name  }}</td></tr>
+                        <tr><td>{{  VSplayer2.agent  }} \\ {{  VSplayer2.name  }}</td></tr>
+                        <tr><td>{{  VSplayer3.agent  }} \\ {{  VSplayer3.name  }}</td></tr>
+                        <tr><td>{{  VSplayer4.agent  }} \\ {{  VSplayer4.name  }}</td></tr>
+                        <tr><td>{{  VSplayer5.agent  }} \\ {{  VSplayer5.name  }}</td></tr>
+                        <tr><td>Wins: {{  VSwins  }} // Losses: {{  VSlosses  }}</td></tr>
+                        <tr><td>Team Strength: <i>?</i></td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+    </form>
+{% endblock %}

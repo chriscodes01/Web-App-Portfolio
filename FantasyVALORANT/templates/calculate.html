@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Calculate Power Rating
+{% endblock %}
+
+{% block main %}
+    <form action="/calculate" class="needs-validation" method="post">
+          <div class="col-md-4"></div>
+            <div class="mb-3">
+                <label class="form-label" style="font-size: 20px;"><strong>Calculate Power Rating</strong></label>
+                <p class="mb-3 text-success">{{  feedback  }}</p>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="agentName" name="agentName" placeholder="Agent Name" type="text" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="matches" name="matches" placeholder="Matches Played" type="number" min="0" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="winrate" name="winrate" placeholder="Matches Win %" type="number" step="0.001" min="0" max="1" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="acs" name="acs" placeholder="ACS" type="number" step="0.1" min="0" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="kast" name="kast" placeholder="KAST" type="number" step="0.001" min="0" max="1" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="multiplier" name="multiplier" placeholder="VCT/Rank Multiplier" type="number" step=0.1 min="1" max="1.5" required>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Calculate</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Recruit Failure
+{% endblock %}
+
+{% block main %}
+        <h3>Unable to recruit. Please try again.</h3>
+        <p><strong>{{  agentType  }} {{ agentName  }}</strong> is already on your roster!</p>
+        <p>You are refunded 50 credits. You have {{ credits }} credits remaining.</p>
+{% endblock %}

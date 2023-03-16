@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Submit Agent
+{% endblock %}
+
+{% block main %}
+    <form action="/submit" class="needs-validation" method="post">
+          <div class="col-md-4"></div>
+            <div class="mb-3">
+                <label class="form-label" style="font-size: 20px;"><strong>Submit Agent</strong></label>
+                <p class="mb-3 text-success">{{  feedback  }}</p>
+                <select class="form-control mx-auto w-25" id="agentType" name="agentType" required>
+                    <option value="" hidden select-disabled>Choose type</option>
+                    <option value="Coach" name="Coach">Coach</option>
+                    <option value="Player" name="Player">Player</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <select class="form-control mx-auto w-25" id="agentRegion" name="agentRegion" required>
+                    <option value="" hidden select-disabled>Choose region</option>
+                    <option value="Americas" name="Americas">Americas</option>
+                    <option value="EMEA" name="EMEA">EMEA</option>
+                    <option value="Pacific" name="Pacific">Pacific</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="agentName" name="agentName" placeholder="Agent Name" type="text" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="agentValue" name="agentValue" placeholder="Agent Value" type="number" step=0.01 min="0" required>
+            </div>
+            <div class="mb-3">
+                <select class="form-control mx-auto w-25" id="agentAgent" name="agentAgent" required>
+                    <option value="" hidden select-disabled>Choose agent</option>
+                    <option value="Coach" name="Coach">Coach</option>
+                    <option value="Astra" name="Astra">Astra</option>
+                    <option value="Breach" name="Breach">Breach</option>
+                    <option value="Brimstone" name="Brimstone">Brimstone</option>
+                    <option value="Chamber" name="Chamber">Chamber</option>
+                    <option value="Cypher" name="Cypher">Cypher</option>
+                    <option value="Fade" name="Fade">Fade</option>
+                    <option value="Jett" name="Jett">Jett</option>
+                    <option value="KAY/O" name="KAY/O">KAY/O</option>
+                    <option value="Killjoy" name="Killjoy">Killjoy</option>
+                    <option value="Neon" name="Neon">Neon</option>
+                    <option value="Omen" name="Omen">Omen</option>
+                    <option value="Phoenix" name="Phoenix">Phoenix</option>
+                    <option value="Raze" name="Raze">Raze</option>
+                    <option value="Reyna" name="Reyna">Reyna</option>
+                    <option value="Sage" name="Sage">Sage</option>
+                    <option value="Skye" name="Skye">Skye</option>
+                    <option value="Sova" name="Sova">Sova</option>
+                    <option value="Viper" name="Viper">Viper</option>
+                    <option value="Yoru" name="Yoru">Yoru</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <select class="form-control mx-auto w-25" id="agentRole" name="agentRole" required>
+                    <option value="" hidden select-disabled>Choose role</option>
+                    <option value="Coach" name="Coach">Coach</option>
+                    <option value="Duelist" name="Duelist">Duelist</option>
+                    <option value="Initiator" name="Initiator">Initiator</option>
+                    <option value="Controller" name="Controller">Controller</option>
+                    <option value="Sentinel" name="Sentinel">Sentinel</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <select class="form-control mx-auto w-25" id="agentRarity" name="agentRarity" required>
+                    <option value="" hidden select-disabled>Choose rarity</option>
+                    <option value="1" name="A Tier">A Tier</option>
+                    <option value="2" name="B Tier">B Tier</option>
+                    <option value="3" name="C Tier">C Tier</option>
+                    <option value="4" name="Casual">Casual</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="ascentW%" name="ascentW%" placeholder="Ascent Win %" type="number" step=0.001 min="0" max="1" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="bindW%" name="bindW%" placeholder="Bind Win %" type="number" step=0.001 min="0" max="1" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="breezeW%" name="breezeW%" placeholder="Breeze Win %" type="number" step=0.001 min="0" max="1" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="fractureW%" name="fractureW%" placeholder="Fracture Win %" type="number" step=0.001 min="0" max="1" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="havenW%" name="havenW%" placeholder="Haven Win %" type="number" step=0.001 min="0" max="1" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="iceboxW%" name="iceboxW%" placeholder="Icebox Win %" type="number" step=0.001 min="0" max="1" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="pearlW%" name="pearlW%" placeholder="Pearl Win %" type="number" step=0.001 min="0" max="1" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-25" id="splitW%" name="splitW%" placeholder="Split Win %" type="number" step=0.001 min="0" max="1" required>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit Agent</button>
+    </form>
+{% endblock %}

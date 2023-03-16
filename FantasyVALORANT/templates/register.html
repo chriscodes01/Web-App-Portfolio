@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+<!-- {% block javascript %}
+    <script type="text/javascript">
+        {% include "validation.js" %}
+    </script>
+{% endblock %} -->
+
+{% block main %}
+    <form action="/register" class="needs-validation" method="post"
+          oninput='confirmation.setCustomValidity(confirmation.value != password.value ? "Confirmation password does not match." : "")'>
+          <!-- <div class="col-md-4" style="text-align: center;">
+            <label class="form-label">Register Account</label>
+          </div> -->
+          <div class="col-md-4"></div>
+            <div class="mb-3">
+                <label class="form-label" style="font-size: 20px;">Register Account</label>
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text"
+                       required minlength="3" maxlength="12">
+                <div class="text-danger">{{  invalid_feedback  }}</div>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="validationPassword" name="password" placeholder="Password" type="password"
+                       required minlength="3">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="confirm_pass" name="confirmation" placeholder="Confirm Password" type="password" required>
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="name" name="name" placeholder="Name" type="text"
+                       required minlength="3">
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="teamName" name="teamName" placeholder="Team Name" type="text"
+                       required minlength="3" maxlength="20">
+                <div class="text-danger">{{  invalid_feedback_2  }}</div>
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" class="form-control mx-auto w-auto" id="teamShort" name="teamShort" placeholder="Team Name Abbreviation" type="text"
+                       required minlength="2" maxlength="4">
+                <div class="text-danger">{{  invalid_feedback_3  }}</div>
+            </div>
+            <div class="mb-3">
+                <select class="form-control mx-auto w-auto" id="region" name="region" required>
+                    <option value="" hidden select-disabled>Choose your region</option>
+                    <option value="Americas" id="Americas">Americas</option>
+                    <option value="EMEA" id="EMEA">EMEA</option>
+                    <option value="Pacific" id="Pacific">Pacific</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Register Account</button>
+    </form>
+{% endblock %}
+
+<!--
+    <small id="regionHelpBlock" class="form-text text-muted">
+                    Your region will affect the eligible players on your team. You must choose minimum of four players from your region, and you are allowed one import player.
+                    Your region does not have to reflect where you actually live. You can represent any region you choose.
+    </small>
+-->

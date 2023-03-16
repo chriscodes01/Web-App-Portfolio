@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Success
+{% endblock %}
+
+{% block main %}
+    <!-- https://memegen.link/ -->
+    <img alt="{{ top }}" class="border img-fluid" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://earlygame.com/uploads/images/_body/Valorant-VCT-Champions-LOUD-Winners-Banner-2.jpg" title="{{ top }}">
+{% endblock %}
