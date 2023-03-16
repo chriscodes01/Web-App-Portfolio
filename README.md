@@ -1,7 +1,7 @@
 # My Portfolio
 
 ### FantasyVALORANT
-This web game app combines Fantasy Football and Valorant together. 
+A major project, this web game app combines Fantasy Football and Valorant together. 
 
 ### Wiki
-This web app acts as a mini-clone to Wikipedia.
+A minor project, his web app acts as a mini-clone to Wikipedia.
