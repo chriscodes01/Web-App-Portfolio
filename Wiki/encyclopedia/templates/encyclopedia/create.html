@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create New Entry
+{% endblock %}
+
+{% block body %}
+    <h1>Create New Entry</h1>
+
+    <div class="col-lg-8 col-md-6">
+        <form action="{% url 'create' %}" method="POST">
+            {% csrf_token %}
+            
+            <label for="title">Type your entry title.</label>
+            <p><input class="" type="text" name="title" placeholder="Entry Title" autofocus required></p>
+            <br>
+
+            <label for="content">Type the content for your entry below using Markdown language.</label>
+            <textarea class="" id="content" name="content" rows="4" cols="50" maxlength="1000" placeholder="Entry Content" required></textarea>
+            <input class="submit" type="submit" value="Submit Entry">
+        </form>
+    </div>
+
+{% endblock %}
